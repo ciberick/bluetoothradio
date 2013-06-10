@@ -12,7 +12,7 @@
 #---------------------------------------------------------------
 
 #clear
-rebootDisconnect=true #only enable this if a reboot of the pi is needed on disconnect
+rebootDisconnect=false #only enable this if a reboot of the pi is needed on disconnect
 paID=""
 qPath=""
 user="pi"
