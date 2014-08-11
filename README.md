@@ -6,7 +6,7 @@
     `sudo apt-get install bluez pulseaudio-module-bluetooth python-gobject python-gobject-2`
   * Asignamos permisos al usuario "Pi"
     `sudo usermod -a -G lp pi`
-  * A continuación, vamos a hacer compatible al módulo bluetooth para la transmisión de audio. Edite **/etc/bluetooth/audio.conf** y agregar esto después de [General]:
+  * A continuación, vamos a hacer compatible al módulo bluetooth para la transmisión de audio. Edite **/etc/bluetooth/audio.conf** y agregar esto después de **[General]**:
     `Enable=Source,Sink,Media,Socket`
   * A continuación, vamos a hacer que PulseAudio haga reproduccion. Editar **/etc/pulse/daemon.conf** y elimine el comentario: `resample-method = trivial ; ADD THIS LINE TO THE FILE!**`
   * Ahora Necesitamos algunos paquetes adicionales. "Qdbus" permite enviar mensajes D-Bus para el demonio de "bluez", "git-core" para poder clonar el repo, y "bluez-tools" que tiene la herramienta "bluetooth-agent" que es una de las piezas del demonio.
