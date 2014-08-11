@@ -16,7 +16,7 @@ If this is the case, set the proper boolean in connect.sh
   * A continuación, vamos a hacer compatible al módulo bluetooth para la transmisión de audio. Edite /etc/bluetooth/audio.conf y agregar esto después de [General]:
     `Enable=Source,Sink,Media,Socket`
   * A continuación, vamos a hacer que PulseAudio haga reproduccion. Editar /etc/pulse/daemon.conf y elimine el comentario: **resample-method = trivial ; ADD THIS LINE TO THE FILE!**
-  *Ahora Necesitamos algunos paquetes adicionales. "Qdbus" permite enviar mensajes D-Bus para el demonio de "bluez", "git-core" para poder clonar el repo, y "bluez-tools" que tiene la herramienta "bluetooth-agent" que es una de las piezas del demonio.
+  * Ahora Necesitamos algunos paquetes adicionales. "Qdbus" permite enviar mensajes D-Bus para el demonio de "bluez", "git-core" para poder clonar el repo, y "bluez-tools" que tiene la herramienta "bluetooth-agent" que es una de las piezas del demonio.
     `sudo apt-get install bluez-tools qdbus git-core`
   
 1. Install:
