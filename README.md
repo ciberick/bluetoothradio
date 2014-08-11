@@ -1,7 +1,6 @@
 #Raspberry Pi Bluetooth Audio Player 
 
-##Proceso de Instalacion:
-1. Instalacion:
+##Instalacion:
 
   * Instalar Paquetes para Bluetooh
     `sudo apt-get install bluez pulseaudio-module-bluetooth python-gobject python-gobject-2`
@@ -12,6 +11,8 @@
   * A continuación, vamos a hacer que PulseAudio haga reproduccion. Editar **/etc/pulse/daemon.conf** y elimine el comentario: `resample-method = trivial ; ADD THIS LINE TO THE FILE!**`
   * Ahora Necesitamos algunos paquetes adicionales. "Qdbus" permite enviar mensajes D-Bus para el demonio de "bluez", "git-core" para poder clonar el repo, y "bluez-tools" que tiene la herramienta "bluetooth-agent" que es una de las piezas del demonio.
     `sudo apt-get install bluez-tools qdbus git-core`
+
+  * Podemos cambiar el nombre del dispositivo bluetooh si se prefiere. Editar **sudo nano /etc/bluetooth/main.conf** y cambiar el `Name = RaspiBluetooh`
 
   * Ahora, vamos a la raíz, poner el siguiente código en / root:
      
@@ -28,8 +29,8 @@
     `update-rc.d bluetooth-server defaults`
     
     `reboot`
-    
-2. Solucionando algunos problemas que se pueden presentar:
+
+##Solucionando Problemas
  
   * Listar los Fuentes(Sources): `pactl list sources short`
 
