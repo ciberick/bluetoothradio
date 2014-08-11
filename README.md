@@ -42,7 +42,7 @@
     
     0 alsa_output.platform-bcm2835_AUD0.0.analog-stereo    module-alsa-card.c    s16le 2ch 44100Hz    SUSPENDED
  
-  * Si lo conecta automaticamente, conectar manualmente el "source" al "sink": `pactl load-module module-loopback source=bluez_source.B8_C6_8E_52_E8_CA sink=alsa_output.platform-bcm2835_AUD0.0.analog-stereo`
+  * Si no conecta automaticamente, conectar manualmente el "source" al "sink": `pactl load-module module-loopback source=bluez_source.B8_C6_8E_52_E8_CA sink=alsa_output.platform-bcm2835_AUD0.0.analog-stereo`
 
     Si reproduce la canción en el teléfono, se debe jugar en los altavoces conectados. Si no, tal vez la salida por defecto no es la salida de línea o el volumen está silenciado o demasiado bajo.
 
