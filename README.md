@@ -15,8 +15,8 @@ If this is the case, set the proper boolean in connect.sh
     `sudo usermod -a -G lp pi`
   * A continuación, vamos a hacer compatible al módulo bluetooth para la transmisión de audio. Edite /etc/bluetooth/audio.conf y agregar esto después de [General]:
     `Enable=Source,Sink,Media,Socket`
-  * A continuación, vamos a dejar que haga lo pulseaudio reproducción. Editar /etc/pulse/daemon.conf y elimine el comentario:
-  * 
+  * A continuación, vamos a hacer que PulseAudio haga reproduccion. Editar /etc/pulse/daemon.conf y elimine el comentario:
+    **resample-method = trivial ; ADD THIS LINE TO THE FILE!**
   
 1. Install:
   * all files in /root/bluetoothradio
