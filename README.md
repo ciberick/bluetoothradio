@@ -13,15 +13,20 @@
     `sudo apt-get install bluez-tools qdbus git-core`
 
   * Ahora, vamos a la raíz, poner el siguiente código en / root:
-   * `sudo apt-get install bluez-tools qdbus git-core`
-   * `sudo apt-get install bluez-tools qdbus git-core`
-   * `sudo apt-get install bluez-tools qdbus git-core`
-   * `git clone https://github.com/ciberick/bluetoothradio --branch Wheezy`
-   * `cd bluetoothradio`
-   * `cp bluetooth-server /etc/init.d`
-   * `chmod 755 /etc/init.d/bluetooth-server && chmod +x /etc/init.d/bluetooth-server`
-   * `update-rc.d bluetooth-server defaults`
-   * `reboot`
+     
+    `sudo su -`
+
+    `git clone https://github.com/ciberick/bluetoothradio --branch Wheezy`
+    
+    `cd bluetoothradio`
+    
+    `cp bluetooth-server /etc/init.d`
+    
+    `chmod 755 /etc/init.d/bluetooth-server && chmod +x /etc/init.d/bluetooth-server`
+    
+    `update-rc.d bluetooth-server defaults`
+    
+    `reboot`
 
 ##Uso:
 Después del reinicio, ahora se puede asociar el dispositivo a través de "1234" (a menos que haya modificado el archivo bluetoothPin), y a poner su música favorita! :)
