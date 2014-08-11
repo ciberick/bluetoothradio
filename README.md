@@ -26,4 +26,6 @@
 ##Uso:
 Después del reinicio, ahora se puede asociar el dispositivo a través de "1234" (a menos que haya modificado el archivo bluetoothPin), y a poner su música favorita! :)
 
-Si por alguna razón no es de conexión, visite el tutorial de KMonkey711 y siga los pasos para conectar y confiar el dispositivo y reinicie el pi.
+Si por alguna razón no se conecta, visite el tutorial de [KMonkey711](http://kmonkey711.blogspot.com/2012/12/a2dp-audio-on-raspberry-pi.html) y siga los pasos para conectar y asociar el dispositivo y reinicie el pi.
+
+
