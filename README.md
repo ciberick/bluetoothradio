@@ -27,6 +27,22 @@
     `update-rc.d bluetooth-server defaults`
     
     `reboot`
+    
+ 2. Solucionando algunos problemas que se pueden presentar:
+ 
+    Listar los Fuentes: `pactl list sources short`
+
+    0    alsa_output.platform-bcm2835_AUD0.0.analog-stereo.monitor    module-alsa-card.c    s16le 2ch 44100Hz    SUSPENDED
+
+   1    bluez_source.B8_C6_8E_52_E8_CA    module-bluetooth-device.c    s16le 2ch 44100Hz    SUSPENDED
+
+    Listar los "sinks". Un receptor de ALSA para el códec de BCM debe aparecer: `pactl list sinks short`
+    
+ 0    alsa_output.platform-bcm2835_AUD0.0.analog-stereo    module-alsa-card.c    s16le 2ch 44100Hz    SUSPENDED
+ 
+Conectar el "source" al the "sink": `pactl load-module module-loopback source=bluez_source.B8_C6_8E_52_E8_CA sink=alsa_output.platform-bcm2835_AUD0.0.analog-stereo`
+
+Si reproduce la canción en el teléfono, se debe jugar en los altavoces conectados. Si no, tal vez la salida por defecto no es la salida de línea o el volumen está silenciado o demasiado bajo.
 
 ##Uso:
 Después del reinicio, ahora se puede asociar el dispositivo a través de "1234" (a menos que haya modificado el archivo bluetoothPin), y a poner su música favorita! :)
