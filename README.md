@@ -8,9 +8,16 @@ To cause this, successfully pair, then disconnect via the device, then attempt t
 If this is the case, set the proper boolean in connect.sh 
 
 ##Prerequisites:
-1. Packages:
-  * `bluez pulseaudio-module-bluetooth python-gobject python-gobject-2`
-  * `bluez-tools qdbus`
+1. Instalacion:
+  * Instalar Paquetes para Bluetooh
+    `sudo apt-get install bluez pulseaudio-module-bluetooth python-gobject python-gobject-2`
+  * Asignamos permisos al usuario "Pi"
+    `sudo usermod -a -G lp pi`
+  * A continuación, vamos a hacer compatible al módulo bluetooth para la transmisión de audio. Edite /etc/bluetooth/audio.conf y agregar esto después de [General]:
+    `Enable=Source,Sink,Media,Socket`
+  * A continuación, vamos a dejar que haga lo pulseaudio reproducción. Editar /etc/pulse/daemon.conf y elimine el comentario:
+  * 
+  
 1. Install:
   * all files in /root/bluetoothradio
   * `cp bluetoothradio/bluetooth-server /etc/init.d`
