@@ -34,13 +34,13 @@
  
   * Listar los Fuentes(Sources): `pactl list sources short`
 
-    0 alsa_output.platform-bcm2835_AUD0.0.analog-stereo.monitor    module-alsa-card.c    s16le 2ch 44100Hz    SUSPENDED
+    0 alsa_output.platform-bcm2835_AUD0.0.analog-stereo.monitor    module-alsa-card.c    s16le 2ch 44100Hz    **IDLE**
 
-    1 bluez_source.B8_C6_8E_52_E8_CA    module-bluetooth-device.c    s16le 2ch 44100Hz    SUSPENDED
+    1 bluez_source.B8_C6_8E_52_E8_CA    module-bluetooth-device.c    s16le 2ch 44100Hz    **RUNNING**
 
   * Listar los Receptores (sinks). Un receptor de ALSA para el códec de BCM debe aparecer: `pactl list sinks short`
     
-    0 alsa_output.platform-bcm2835_AUD0.0.analog-stereo    module-alsa-card.c    s16le 2ch 44100Hz    SUSPENDED
+    0 alsa_output.platform-bcm2835_AUD0.0.analog-stereo    module-alsa-card.c    s16le 2ch 44100Hz    **RUNNING**
  
   * Si no conecta automaticamente, conectar manualmente el "source" al "sink": `pactl load-module module-loopback source=bluez_source.B8_C6_8E_52_E8_CA sink=alsa_output.platform-bcm2835_AUD0.0.analog-stereo`
   
